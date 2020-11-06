@@ -1,0 +1,26 @@
+{
+  "name": "React-Training",
+  "version": "1.0.0",
+  "description": "This is my react training repository. I will be making some of the basic structure using react in this as material is provided in front end masters.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier \"src /**/*.{js,html}\" --write",
+    "lint": "eslint \"src /**/*.{js,jsx}\" --quiet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Machinix/React-Training.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Machinix/React-Training/issues"
+  },
+  "homepage": "https://github.com/Machinix/React-Training#readme",
+  "devDependencies": {
+    "eslint": "^7.12.1",
+    "eslint-config-prettier": "^6.15.0"
+  }
+}
