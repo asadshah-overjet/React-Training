@@ -4,6 +4,7 @@
   "description": "This is my react training repository. I will be making some of the basic structure using react in this as material is provided in front end masters.",
   "main": "index.js",
   "scripts": {
+    "dev": "parcel src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier \"src /**/*.{js,html}\" --write",
     "lint": "eslint \"src /**/*.{js,jsx}\" --quiet"
@@ -21,6 +22,11 @@
   "homepage": "https://github.com/Machinix/React-Training#readme",
   "devDependencies": {
     "eslint": "^7.12.1",
-    "eslint-config-prettier": "^6.15.0"
+    "eslint-config-prettier": "^6.15.0",
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }
