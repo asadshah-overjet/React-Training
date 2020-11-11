@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
+    "dev:mock": "cross-env PET_MOCK=mock npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier \"src /**/*.{js,html}\" --write",
     "lint": "eslint \"src /**/*.{js,jsx}\" --quiet"
@@ -22,6 +23,7 @@
   "homepage": "https://github.com/Machinix/React-Training#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
+    "cross-env": "^7.0.2",
     "eslint": "^7.12.1",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-import": "^2.22.1",
@@ -32,7 +34,11 @@
   },
   "dependencies": {
     "@frontendmasters/pet": "^1.0.3",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
-  }
+    "@reach/router": "^1.3.4",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  },
+  "browserslist": [
+    "last 2 Chrome versions"
+  ]
 }
