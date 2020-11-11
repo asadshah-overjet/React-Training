@@ -25,7 +25,6 @@ const SearchParam = () => {
       type: animal,
     });
 
-    console.log('animals', animal);
     setPets(animals || []);
   }
 
