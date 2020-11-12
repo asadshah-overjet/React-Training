@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import pet, { ANIMALS } from '@frontendmasters/pet';
 import Results from './Results';
 import useDropdown from './UseDropdown';
+import ThemeContext from './ThemeContext';
 
 const SearchParam = () => {
   const [location, setLocation] = useState('Seattle, WA');
@@ -17,6 +18,7 @@ const SearchParam = () => {
     breeds,
   );
   const [pets, setPets] = useState([]);
+  const [theme, setTheme] = useContext(ThemeContext);
 
   async function requestPets() {
     // eslint-disable-next-line
@@ -60,7 +62,20 @@ const SearchParam = () => {
         </label>
         <AnimalDropdown />
         <BreedDropDown />
-        <button>submit</button>
+        <label htmlFor="location">
+          Theme
+          <select
+            value={theme}
+            onChange={(e) => setTheme(e.target.value)}
+            onBlur={(e) => setTheme(e.target.value)}
+          >
+            <option value="peru">Peru</option>
+            <option value="darkblue">Dark Blue</option>
+            <option value="chartreuse">Chartreuse</option>
+            <option value="mediumorchid">Medium Orchid</option>
+          </select>
+        </label>
+        <button style={{ backgroundColor: theme }}>submit</button>
       </form>
       <Results pets={pets} />
     </div>
