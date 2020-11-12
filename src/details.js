@@ -4,13 +4,6 @@ import Carousel from './Carousel';
 
 class Details extends React.Component {
   state = { loading: true };
-  // constructor(props) {
-  //   super(props);
-
-  //   this.state = {
-  //     loading: true,
-  //   };
-  // }
 
   componentDidMount() {
     pet.animal(this.props.id).then(({ animal }) => {
