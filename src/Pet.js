@@ -1,7 +1,9 @@
 import React from 'react';
 
-const Pet = (name, animal, breed, media, location, id) => {
+const Pet = ({ name, animal, breed, media, location, id }) => {
+  // const {name, animal, breed, media, location, id} = props;
   let hero = 'http://placecorgi.com/300/300';
+  // console.log(media);
   if (media.length) {
     hero = media[0].small;
   }

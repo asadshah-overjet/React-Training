@@ -19,6 +19,8 @@ const SearchParam = () => {
   const [pets, setPets] = useState([]);
 
   async function requestPets() {
+    // eslint-disable-next-line
+    console.log(location, breed, animal);
     const { animals } = await pet.animals({
       location,
       breed,
@@ -42,11 +44,9 @@ const SearchParam = () => {
     <div className="search-params">
       <h1>{location}</h1>
       <form
-        onSubmit={() => {
-          (e) => {
-            e.preventDefault();
-            requestPets();
-          };
+        onSubmit={(e) => {
+          e.preventDefault();
+          requestPets();
         }}
       >
         <label htmlFor="location">
